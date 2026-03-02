@@ -1,0 +1,25 @@
+model z thickness: 0.052713 for sin wave median. set to 0.1 for all others thickness
+
+Step to make model:
+
+- make function in python
+- open dxf in librecad and add lines to fill in bottom block
+
+- import dxf into blender with scale 0.001
+- click object->convert->mesh at top of screen in object mode
+
+- tab over to edit mode, use L to check if vertices are connected
+	- if not, try mesh->cleanup->merge by distance
+- press L again to see if all connected
+
+- once connected, press A to select all
+- Press F to fill in face
+- Press E to extrude
+	- Press Z to align to Z axis
+- Put any thickness then in N panel adjust to 0.1m
+
+- then press A to select all
+- Press CTRL T to triangulate 
+- Press Shift + N to recalculate normal
+- Press CTRL A to perform All transforms
+- export as USD
